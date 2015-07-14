@@ -23,10 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var feedMediaViewController = FeedMediaViewController(nibName:"FeedMeida_iPhone", bundle:nil)
        var feedNavigationController = UINavigationController(rootViewController: feedMediaViewController)
-//        feedMediaViewController.clickedFeed = selectedFeed
-//        navigationController?.pushViewController(feedMediaViewController, animated: true)
+
+        var nibName:String = "";
         
-        window?.rootViewController = feedNavigationController;
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            nibName = "LoginView_iPad"
+        }else{
+             nibName = "LoginView_iPhone"
+        }
+        let loginViewController = LoginViewController(nibName :nibName, bundle:nil)
+//        self.appDelegate.window?.rootViewController = loginViewController;
+        
+        window?.rootViewController = loginViewController;
         
         return true
         

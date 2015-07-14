@@ -90,11 +90,18 @@ class LoginViewController: ParentViewController,UITextFieldDelegate {
 
         }
         
-                        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-                           self.setupPhoneScreens()
-                        } else {
-                            self.setupPadScreen()
-                        }
+//                        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+//                           self.setupPhoneScreens()
+//                        } else {
+//                            self.setupPadScreen()
+//                        }
+        
+        var feedMediaViewController = FeedMediaViewController(nibName:"FeedMeida_iPhone", bundle:nil)
+        var feedNavigationController = UINavigationController(rootViewController: feedMediaViewController)
+        
+        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.window?.rootViewController = feedNavigationController;
+
     }
     // SetUp Tab Bar Controller For Phone
     func setupPhoneScreens() {

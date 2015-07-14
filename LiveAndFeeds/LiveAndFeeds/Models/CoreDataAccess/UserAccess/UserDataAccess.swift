@@ -13,24 +13,30 @@ class UserDataAccess: NSObject {
     
     func isValidUser(userName:NSString!,password:NSString!) -> Bool{
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let manageOBC  = appDelegate.managedObjectContext!
-        
-        let fetchRequest = NSFetchRequest(entityName: "Users")
-        let predicate = NSPredicate(format: "userName == %@ AND password == %@", userName,password )
-        
-        fetchRequest.predicate = predicate
-        
-        var error : NSError?
-        
-        let fetchResults = manageOBC.executeFetchRequest(fetchRequest, error: &error) as? [Users]
-        
-        if fetchResults?.count>0 {
+        if (userName == "Test1" && password == "Test123"){
             return true
-        }else{
-            return false
         }
+        
+        return false
+        
+//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        
+//        let manageOBC  = appDelegate.managedObjectContext!
+//        
+//        let fetchRequest = NSFetchRequest(entityName: "Users")
+//        let predicate = NSPredicate(format: "userName == %@ AND password == %@", userName,password )
+//        
+//        fetchRequest.predicate = predicate
+//        
+//        var error : NSError?
+//        
+//        let fetchResults = manageOBC.executeFetchRequest(fetchRequest, error: &error) as? [Users]
+//        
+//        if fetchResults?.count>0 {
+//            return true
+//        }else{
+//            return false
+//        }
     }
     
     func insertUser(userName:NSString!,password:NSString!) {

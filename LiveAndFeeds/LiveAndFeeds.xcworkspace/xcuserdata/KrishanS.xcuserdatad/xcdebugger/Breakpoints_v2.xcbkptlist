@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LiveAndFeeds/ViewController/LoginViewController/LoginViewController.swift"
-            timestampString = "458472195.948994"
+            timestampString = "458554461.617267"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "keyboardWillShow(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LiveAndFeeds/Models/CoreDataAccess/UserAccess/UserDataAccess.swift"
-            timestampString = "456654418.781705"
+            timestampString = "458554648.39983"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "insertUser(_:password:)"
             landmarkType = "5">
          </BreakpointContent>
